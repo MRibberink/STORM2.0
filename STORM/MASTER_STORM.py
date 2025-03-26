@@ -39,10 +39,10 @@ if os.path.isdir(storm_data_path)==False:
 # Step 1: Define basin and number of years to run
 #==============================================================================
 #please set basin (EP,NA,NI,SI,SP,WP)
-basin='SI'
+basin='NA'
 loop=0 #ranges between 0 and 9 to simulate slices of 1000 years
 
-total_years=20 #set the total number of years you'd like to simulate
+total_years=100 #set the total number of years you'd like to simulate
 
 TC_data=[] 
 

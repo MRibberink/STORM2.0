@@ -383,12 +383,13 @@ def TC_pressure(idx,latlist,lonlist,landfalllist,year,storms,monthlist,daylist,h
         Penv_field=np.loadtxt(os.path.join(dir_path,'STORM_variables','MEAN_MSLP','Monthly_mean_MSLP_'+str(month)+'.txt'))
         
         #for months outside the hurricane season there are not coefficients, so we grab coefficients from the previous month
-        if idx in (0,1,2,5) and month==12:
+        if idx in (0,1,2,5) and monthlist[storm_number][i]==12:
             month=11
-        elif (idx==3 or idx==4) and month==5:
-            month==4
-        elif idx==2 and month==7:
-            month==6
+        elif (idx==3 or idx==4) and monthlist[storm_number][i]==5:
+            month=4
+        elif idx==2 and monthlist[storm_number][i]==7:
+            month=6
+    
             
         constants_pressure=JM_pressure[idx][month]
         constants_pressure=np.array(constants_pressure)
@@ -402,12 +403,12 @@ def TC_pressure(idx,latlist,lonlist,landfalllist,year,storms,monthlist,daylist,h
 
         while i<len(latfull): 
             if monthlist[storm_number][i]!=month:
-                if idx in (0,1,2,5) and month==12:
+                if idx in (0,1,2,5) and monthlist[storm_number][i]==12:
                     month=11
-                elif (idx==3 or idx==4) and month==5:
-                    month==4
-                elif idx==2 and month==7:
-                    month==6
+                elif (idx==3 or idx==4) and monthlist[storm_number][i]==5:
+                    month=4
+                elif idx==2 and monthlist[storm_number][i]==7:
+                    month=6
                 else: 
                     month=monthlist[storm_number][i]
                 
