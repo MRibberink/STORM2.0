@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@author: Nadia Bloemendaal, nadia.bloemendaal@vu.nl, edited by Marjolein Ribberink, m.r.s.ribberink@vu.nl
+@author: Nadia Bloemendaal, nadia.bloemendaal@vu.nl, Marjolein Ribberink, m.r.s.ribberink@vu.nl
 
 For more information, please see 
 Bloemendaal, N., Haigh, I.D., de Moel, H. et al. 

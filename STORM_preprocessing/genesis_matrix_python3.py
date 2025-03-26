@@ -1,7 +1,17 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Sep 22 11:50:17 2021
+@authors: Nadia Bloemendaal, nadia.bloemendaal@vu.nl, Marjolein Ribberink, m.r.s.ribberink@vu.nl
+
+This module is part of the STORM model
+
+For more information, please see 
+Bloemendaal, N., Haigh, I.D., de Moel, H. et al. 
+Generation of a global synthetic tropical cyclone hazard dataset using STORM. 
+Sci Data 7, 40 (2020). https://doi.org/10.1038/s41597-020-0381-2
+
 This is the script for generating the genesis matrices in Python 3 (with Cartopy)
+
+Copyright (C) 2020 Nadia Bloemendaal. All versions released under the GNU General Public License v3.0
 """
 
 import numpy as np

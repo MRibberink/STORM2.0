@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 """
+@authors: Nadia Bloemendaal, nadia.bloemendaal@vu.nl, Marjolein Ribberink, m.r.s.ribberink@vu.nl
+
 This module is part of the STORM model
 
 For more information, please see 

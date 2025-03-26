@@ -1,8 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Mar 19 13:11:11 2025
+@authors: Nadia Bloemendaal, nadia.bloemendaal@vu.nl, Marjolein Ribberink, m.r.s.ribberink@vu.nl
 
-@author: wul339
+For more information, please see 
+Bloemendaal, N., Haigh, I.D., de Moel, H. et al. 
+Generation of a global synthetic tropical cyclone hazard dataset using STORM. 
+Sci Data 7, 40 (2020). https://doi.org/10.1038/s41597-020-0381-2
+
+This is the STORM model master program
+
+Copyright (C) 2020 Nadia Bloemendaal. All versions released under the GNU General Public License v3.0.
 """
 
 #Master storm running - one at a time

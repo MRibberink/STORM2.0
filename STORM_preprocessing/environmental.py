@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 """
+@authors: Nadia Bloemendaal, nadia.bloemendaal@vu.nl, Marjolein Ribberink, m.r.s.ribberink@vu.nl
+
 This module is part of the STORM model
 
 For more information, please see 
@@ -313,7 +315,7 @@ def calculate_MPI_fields():
             else:            
                 df1=df[(df["Month"]==m)]
     
-            df1=df1[(df1["SST"]<30.)] #why are we using only under 30? not really ssts over this and if we don't python breaks
+            df1=df1[(df1["SST"]<30.)] #There aren't really ssts over this and python kind of breaks if we go beyond it
 
             #create SST bins of size step
             step=1.0 

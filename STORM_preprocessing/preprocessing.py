@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 """
+@authors: Nadia Bloemendaal, nadia.bloemendaal@vu.nl, Marjolein Ribberink, m.r.s.ribberink@vu.nl
+
 This module is part of the STORM model
 
 For more information, please see 
@@ -46,7 +48,7 @@ def BOUNDARIES_BASINS(idx):
 
 def find_date_time(t):
     """
-    Find the month corresponding to the timestep in the IBTrACS dataset
+    Find the datetime corresponding to the timestep in the IBTrACS dataset
     input:
         t: timestep (in days since 17-11-1858)
     output:
