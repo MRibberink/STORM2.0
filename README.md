@@ -4,11 +4,8 @@ See https://doi.org/10.1038/s41597-020-0381-2 for details
 
 This version combines two repositories, STORM_preprocessing and STORM, to create one dual module repository.
 
-STORM_preprocessing:
-Conducts the data preprocessing necessary for STORM.
-
-STORM:
-Generates synthetic cyclone tracks.
+- STORM_preprocessing: Conducts the data preprocessing necessary for STORM.
+- STORM: Generates synthetic cyclone tracks.
 
 A user guide for the model is in progress!
 
