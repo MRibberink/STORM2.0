@@ -15,6 +15,7 @@ Copyright (C) 2020 Nadia Bloemendaal. All versions released under the GNU Genera
 #Master storm running - one at a time
 
 import numpy as np
+import pandas as pd
 
 #Custom made modules
 from SELECT_BASIN import Gen_basin
@@ -44,7 +45,24 @@ loop=0 #ranges between 0 and 9 to simulate slices of 1000 years
 
 total_years=100 #set the total number of years you'd like to simulate
 
-TC_data=[] 
+TC_data = pd.DataFrame(
+    columns=[
+        "year",
+        "month",
+        "time",
+        "track_id",
+        "timeStep",
+        "basinID",
+        "lat",
+        "lon",
+        "minP",
+        "Vmax",
+        "Rmax",
+        "cat",
+        "landfall",
+        "dist_land",
+    ]
+)
 
 times=np.empty(total_years+1)
 times[0]=start_time
@@ -68,12 +86,10 @@ for year in range(0,total_years):
             print("done year "+str(year))
             times[year+1]=time.time()
             print(storms_per_year, times[year+1]-times[year])
-            
-         
-TC_data=np.array(TC_data)
 
-    
-np.savetxt(os.path.join(storm_data_path,'STORM_DATA_'+str(basin)+'_'+str(total_years)+'_YEARS_'+str(loop)+'.txt'),TC_data,fmt='%5s',delimiter=',')
+TC_data.to_csv(
+    os.path.join(storm_data_path, f'STORM_DATA_{basin}_{total_years}_YEARS_{loop}.csv'),
+)
 
 end_time=time.time()
 print(end_time-start_time)
