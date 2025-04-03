@@ -299,7 +299,7 @@ def add_parameters_to_TC_data(pressure_list,wind_list,latfull,lonfull,year,storm
     genesis_hour : hour of TC formation
     landfallfull : array of landfall (0=no 1=yes).
     lijst : dummy indicating the duration of the TC.
-    TC_data : existing array of TC data to which will be appended.
+    TC_data : existing DataFrame of TC data to which will be appended.
     idx : basin idx.
 
     Returns
@@ -309,8 +309,13 @@ def add_parameters_to_TC_data(pressure_list,wind_list,latfull,lonfull,year,storm
     """
     rmax_list=Add_Rmax(pressure_list)
     
-    x=min(len(landfallfull),len(lijst))    
-         
+    x=min(len(landfallfull),len(lijst))
+
+    if len(TC_data) == 0:
+        track_id = 0
+    else:
+        track_id = TC_data.track_id.max() + 1
+
     for l in range(0,x):
         if landfallfull[l]==1.:
             distance=0
@@ -320,8 +325,8 @@ def add_parameters_to_TC_data(pressure_list,wind_list,latfull,lonfull,year,storm
         category=TC_Category(wind_list[l])
         start_time=datetime(2001,monthlist[0],genesis_day,genesis_hour)
         end_time=start_time+timedelta(hours=l*3)
-        TC_data.append([year,monthlist[l],end_time,storm_number,l,idx,latfull[l],lonfull[l],pressure_list[l],wind_list[l],rmax_list[l],category,landfallfull[l],distance])
-        
+        TC_data.loc[len(TC_data)] = [year,monthlist[l],end_time,track_id,l,idx,latfull[l],lonfull[l],pressure_list[l],wind_list[l],rmax_list[l],category,landfallfull[l],distance]
+
     return TC_data
 
 def TC_pressure(idx,latlist,lonlist,landfalllist,year,storms,monthlist,daylist,hourlist,TC_data):  
